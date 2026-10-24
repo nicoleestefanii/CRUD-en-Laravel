@@ -1,6 +1,6 @@
 # Laboratorio #2: CRUD rápido en Laravel
 
-**Fecha:** 23/10/2026
+**Fecha:** 16/10/2026
 
 ## Contenido del Repositorio
 
@@ -17,31 +17,31 @@ Este repositorio contiene el **Laboratorio #2** de Desarrollo Web: un **CRUD rá
 
 ### Interfaz Principal
 
-![Listado de productos](docs/listado.png)
+![Listado de productos](capturas/productos.png)
 
 - **Migración de la tabla `products`:** se creó el modelo y su migración con `php artisan make:model Product -m`. La tabla tiene las columnas `id`, `description` (texto), `price` (decimal de 8 dígitos y 2 decimales), `stock` (entero) y `timestamps`. Se ejecutó con `php artisan migrate`.
 
-  ![Tabla products en MySQL](docs/tabla-products.png)
+  ![Tabla products en MySQL](capturas/products.png)
 
 - **Read (listar y ver productos):** la ruta `GET /products` muestra todos los productos en una tabla y `GET /products/{id}` muestra el detalle de uno. Está implementado en los métodos `index` y `show` de `ProductController`.
 
-  ![Detalle de un producto](docs/ver.png)
+  ![Detalle de un producto](capturas/show.png)
 
 - **Create (crear un producto):** el formulario de `GET /products/create` envía los datos por `POST /products`. El método `store` valida los campos y guarda el registro. El modelo define `$fillable` con `description`, `price` y `stock` para permitir la asignación masiva de forma segura.
 
-  ![Formulario para crear un producto](docs/crear.png)
+  ![Formulario para crear un producto](capturas/nuevo.png)
 
 - **Update (editar un producto):** el formulario de `GET /products/{id}/edit` envía los cambios por `PUT /products/{id}` y el método `update` los guarda.
 
-  ![Formulario para editar un producto](docs/editar.png)
+  ![Formulario para editar un producto](capturas/edit.png)
 
 - **Delete (eliminar un producto):** el botón eliminar envía una petición `DELETE /products/{id}` que ejecuta el método `destroy` y borra el registro.
 
-  ![Producto eliminado](docs/eliminar.png)
+  ![Producto eliminado](capturas/delete.png)
 
 - **Registro e inicio de sesión:** con `laravel/ui` se generaron las pantallas de `/register` y `/login`. El cierre de sesión redirige a `/login` y la barra de navegación incluye un enlace a **Productos**.
 
-  ![Pantalla de login](docs/login.png)
+  ![Pantalla de login](capturas/login.png)
 
 ## Estructura de Carpetas o Directorios
 
@@ -78,6 +78,7 @@ crud_rapido/
 ├── composer.json                     # Dependencias de PHP
 ├── package.json                      # Dependencias de Node
 ├── vite.config.js                    # Configuración de Vite
+├── capturas                          # Contiene las imagenes de prueba del laboratorio
 └── README.md                         # Documentación del proyecto
 ```
 
@@ -138,7 +139,7 @@ php artisan route:list --path=products     # verificar las rutas del CRUD
 
 ## Autor y Contexto
 
-- **Nombre:** Estefani _(apellido)_
+- **Nombre:** ENicole Pinto
 - **Institución:** Universidad Tecnológica de Panamá (UTP)
 - **Curso:** Desarrollo Web
 - **Instructora:** Ing. Irina Fong
