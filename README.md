@@ -139,7 +139,7 @@ php artisan route:list --path=products     # verificar las rutas del CRUD
 
 ## Autor y Contexto
 
-- **Nombre:** ENicole Pinto
+- **Nombre:** Nicole Pinto
 - **Institución:** Universidad Tecnológica de Panamá (UTP)
 - **Curso:** Desarrollo Web
 - **Instructora:** Ing. Irina Fong
